@@ -52,40 +52,87 @@
               alt="">
           </div>
         </div>
-        <div class="text-white">
-          <h2>Apa yang bisa dilakukan JavaScript</h2>
-
-          <p id="demo">JavaScript bisa mengganti konten website</p>
-
-          <button
-            type="button"
-            onclick="changeText()"
-          >
-            Click Me!
-          </button>
-
-          <h3>Contoh Aritmatika</h3>
-          <p id="result"></p>
-          <button
-            type="button"
-            onclick="performArithmetic()"
-          >
-            Hitung!
-          </button>
-        </div>
+       
       </div>
     </section>
+    <div class="text-black p-20">
+      <h2>Apa yang bisa dilakukan JavaScript</h2>
+
+      <p id="demo">JavaScript bisa mengganti konten website</p>
+
+      <button
+        type="button"
+        onclick="changeText()"
+        class="bg-blue-600 p-2 rounded"
+      >
+        Click Me!
+      </button>
+      <h3 class="text-2xl font-semibold my-4">Contoh Aritmatika</h3>
+      
+<div class="space-y-4 sm:space-x-4">
+  <input
+    type="number"
+    id="num1"
+    placeholder="Enter the first number"
+    class="w-full sm:w-24 p-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
+  />
+  <input
+    type="number"
+    id="num2"
+    placeholder="Enter the second number"
+    class="w-full sm:w-24 p-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400"
+  />
+  <button
+    onclick="performArithmetic()"
+    class="bg-blue-600 text-white p-2 rounded hover:bg-blue-800 cursor-pointer"
+  >
+    Add
+    
+  </button><!-- Menyalakan Lampu Source Asli dari W3Scholl -->
+  <h2>Menyalakan Lampu Source Asli dari W3Scholl</h2>
+  <button
+    onclick="document.getElementById('gambar').src='https://raw.githubusercontent.com/kerjabhakti/PWA231/main/Chapter06/pic_bulbon.gif'"
+  >
+    Nyalakan Lampunya
+  </button>
+  <img
+    id="gambar"
+    src="https://raw.githubusercontent.com/kerjabhakti/PWA231/main/Chapter06/pic_bulbon.gif"
+    alt=""
+  />
+  <button
+    onclick="document.getElementById('gambar').src='https://raw.githubusercontent.com/kerjabhakti/PWA231/main/Chapter06/pic_bulboff.gif'"
+  >
+    Matikan Lampunya
+  </button>
+</div>
+<div id="result" class="mt-4"></div>
+
+      <p id="result"></p>
+      <button
+        type="button"
+        onclick="performArithmetic()"
+      >
+        Hitung!
+      </button>
+    </div>
     <script>
       function changeText() {
         document.getElementById("demo").innerHTML = "Yee, berhasil! Ini adalah hasil dari memasukkan JavaScript pada HTML. Awas, jangan salah ya? Iya, oke.. hehe.";
       }
 
       function performArithmetic() {
-        var num1 = 5; // Replace with your first number
-        var num2 = 3; // Replace with your second number
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    
+    if (!isNaN(num1) && !isNaN(num2)) {
         var result = num1 + num2;
         document.getElementById("result").innerHTML = "Hasil penjumlahan: " + result;
-      }
+    } else {
+        document.getElementById("result").innerHTML = "Please enter valid numbers.";
+    }
+}
+
     </script>
   </body>
 </html>

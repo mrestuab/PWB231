@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Aritmatika</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Program Aritmatika</h1>
+<body class="font-sans">
+
+    <div class=""bg-cover bg-center h-screen" style="background-image: url('aset/wallpapersden.com_simple-night_1920x1080.jpg'); background-size: 100% 100%;">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+
+        <h1 class="text-3xl font-bold mb-6 text-white">Program Kalkulator</h1>
+
+        <label for="angka1" class="mb-1 text-white">Angka Pertama:</label>
+        <input type="text" id="angka1" class="p-2 mb-4 border border-gray-300 rounded">
+
+        <label for="angka2" class="mb-1 text-white">Angka Kedua:</label>
+        <input type="text" id="angka2" class="p-2 mb-10 border border-gray-300 rounded">
+
+    <div class="flex items">
+        <button id="tambah" class="bg-green-700 text-white py-2 px-5 mr-2 rounded cursor-pointer transition duration-300 hover:bg-green-600">Tambah</button>
     
-    <label for="angka1">Angka Pertama:</label>
-    <input type="text" id="angka1"><br>
-    
-    <label for="angka2">Angka Kedua:</label>
-    <input type="text" id="angka2"><br>
-    
-    <button id="tambah">Tambah</button>
-    <button id="kurang">Kurang</button>
-    <button id="kali">Kali</button>
-    <button id="bagi">Bagi</button>
-    
-    <p>Hasil: <span id="hasil">0</span></p>
-    
+        <button id="kurang" class="bg-red-800 text-white py-2 px-6 mr-2 rounded cursor-pointer transition duration-300 hover:bg-green-600">Kurang</button>
+        <button id="kali" class="bg-blue-500 text-white py-2 px-8 mr-2 rounded cursor-pointer transition duration-300 hover:bg-green-600">Kali</button>
+        <button id="bagi" class="bg-yellow-500 text-white py-2 px-8 mr-2 rounded cursor-pointer transition duration-300 hover:bg-green-600">Bagi</button>
+    </div>
+
+        <p class="mt-8 font-bold text-white">Hasil: <span id="hasil" class="text-orange-500">0</span></p>
+    </div>
+</div>
+
     <script src="Script.js"></script>
 </body>
 </html>

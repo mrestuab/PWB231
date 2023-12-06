@@ -7,6 +7,8 @@ html {
 body {
   background: url("images/bg\ image1.jpg") no-repeat center center fixed;
   min-height: 100vh;
+  background-size: cover;
+  background-position: center ;
 }
 
 nav {
@@ -57,18 +59,47 @@ p {
 }
 img {
   width: 200px;
+  height: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
   gap: 10rem;
   transition: all 600ms ease;
-  display: flex;
+  justify-content: end;
+  display:flex;
   margin: auto;
 
 }
 img:hover {
   transform: scale(1.25);
 }
-.foto-img {
-  width: 400px;
-  background-color: green;
+
+
+
+/* Misalnya, tambahkan media query untuk layar berlebar kurang dari atau sama dengan 768px */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  nav div img {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .image img {
+    max-width: 100%;
+  }
 }
+
