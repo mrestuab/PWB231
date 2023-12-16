@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Pendaftaran Mahasiswa Baru ULBI</title>
 </head>
-<body>
-    <header>
-        <h3>Pendaftaran Mahasiswa Baru</h3>
-        <h1>ULBI</h1>
-</header>
-
-<h4>Menu</h4>
-<nav>
-    <ul>
-        <li><a href="form-daftar.php">daftar</a></li>
-        <li><a href="list-maba.php">pendaftar</a></li>
-
-    </ul>
-</nav>
+<body class="bg-sky-400 flex">
+    <div class="container mt-40 max-w-sm bg-white m-auto p-10 rounded-md shadow-lg">
+        <h1 class="text-3xl text-center font-bold">Pendaftaran Mahasiswa Baru ULBI</h1>
+    <br>
+    <a href="form-daftar.php" class="bg-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparant hover:border-black-300 hover:text-black duration-300 hover:border border border-transparent">daftar</a>
+    <a href="list-maba.php" class="bg-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparant hover:border-black-300 hover:text-black duration-300 hover:border border border-transparent">pendaftaran</a>
+</div>
 </body>
 </html>

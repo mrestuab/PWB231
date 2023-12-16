@@ -5,32 +5,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Pendaftaran Mahasiswa Baru ULBI</title>
 </head>
-<body>
+<body class="bg-sky-400 flex">
+<div class="mt-40 max-w-max bg-white m-auto p-10 rounded-md shadow-lg">
     <header>
-        <h3>Pendaftaran Mahasiswa Baru</h3>
+        <h1 class="text-3xl text-center font-bold">Pendaftaran Mahasiswa Baru</h1>
     </header>
 
     <nav>
-        <a href="form-data.php">[+]Tambah Data</a>
+        <a href="form-daftar.php">[+]Tambah Data</a>
     </nav>
 
     <br>
 
-    <table border="1">
+    <table class="border-collapse border-2 border-gray-500">
         <thead>
             <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Alamat</th>
-                <th>Jenis kelamin</th>
-                <th>Agama</th>
-                <th>Sekolah</th>
-                <th>Aksi</th>
+                <th class="border border-gray-400 p-2">No</th>
+                <th class="border border-gray-400 p-2">Nama</th>
+                <th class="border border-gray-400 p-2">Alamat</th>
+                <th class="border border-gray-400 p-2">Jenis kelamin</th>
+                <th class="border border-gray-400 p-2">Agama</th>
+                <th class="border border-gray-400 p-2">Sekolah</th>
+                <th class="border border-gray-400 p-2">Aksi</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="border-collapse border-2 border-gray-500">
             <?php
             $sql ="SELECT*FROM pendaftaran";
             $query=mysqli_query($db,$sql);
@@ -45,7 +47,7 @@
                 echo "<td>".$maba['sekolah_asal']."</td>";
 
                 echo "<td>";
-                echo "<a href='form-edit.php?id=".$maba['id']."'>Edit</a>|";
+                echo "<a href='edit.php?id=".$maba['id']."'>Edit</a>|";
                 echo "<a href='hapus.php?id=".$maba['id']."'>Hapus</a>|";
                 echo "</td>";
                 echo "<tr>";
@@ -54,5 +56,6 @@
         </tbody>
     </table>
     <p>Total:<?php echo mysqli_num_rows($query)?></p>
+        </div>
 </body>
 </html>
